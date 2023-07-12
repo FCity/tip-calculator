@@ -1,38 +1,79 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
+:root {
+  --strongCyan: hsl(172, 67%, 45%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--lightGrayishCyan);
+}
+  
+body, input {
+  font-family: 'Space Mono', sans-serif;
+  font-weight: 700;
+}
+  
+header {
   text-align: center;
+  padding: 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h3 {
+  color: var(--veryDarkCyan);
+  letter-spacing: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  
+.calculator {
+  border-radius: 1em;
+  background-color: var(--white);
+  padding: 15px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
+label {
+  font-size: 12px;
+  color: var(--veryDarkCyan);
+}
+  
+input {
+  display: block;
+  font-size: 24px;
+}
+  
+.tip {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+  
+.btn-group {
+  padding: 3em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  
+.btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  margin: 1em;
+}
+  
+.active {
+  background-color: darkblue;
+}
+  
+button {
+  cursor: pointer;
+}
+  
+@media only screen and (min-width: 1440px) {
+  /* .calculator {} */
 }
