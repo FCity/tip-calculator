@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react'
+import logo from '../assets/logo.svg'
+import iconDollar from '../assets/icon-dollar.svg'
+import iconPerson from '../assets/icon-person.svg'
 
 export const Calculator = () => {
   const [total, setTotal] = useState('')
@@ -17,7 +20,7 @@ export const Calculator = () => {
   ])
   
   useEffect(() => {
-    let [ttl, tpp, tpc, nop] = [total, tipPreset, tipCustom, numberOfPeople]
+    let [ttl, tpp, tpc, nop] = [Number(total), tipPreset, Number(tipCustom), numberOfPeople]
     
     if (ttl && (tpp || tpc) && nop) {
       let tp = tpp ? ttl * (tpp / 100) : ttl * (tpc / 100)
@@ -27,7 +30,7 @@ export const Calculator = () => {
   }, [total, tipPreset, tipCustom, numberOfPeople])
   
   const handleTotal = e => {
-    setTotal(Number(e.target.value))
+    setTotal(e.target.value)
   }
   
   const handleTipPreset = e => {
@@ -50,7 +53,7 @@ export const Calculator = () => {
   }, [tipPreset])
   
   const handleTipCustom = e => {
-    setTipCustom(Number(e.target.value))
+    setTipCustom(e.target.value)
     setTipPreset('')
   }
   
@@ -70,8 +73,7 @@ export const Calculator = () => {
   return (
     <div className="font-sans lg:px-10 lg:py-16">
       <header className='text-center text-vdc text-lg font-bold p-6 lg:p-8'>
-        <h3 className='tracking-widest opacity-80'>SPLI</h3>
-        <h3 className='tracking-widest opacity-80'>TTER</h3>
+        <img className='m-auto p-5 lg:pb-8' src={logo} alt="" />
       </header>
       
       <div className="bg-white rounded-t-3xl lg:rounded-3xl p-6 lg:p-8 lg:w-3/4 lg:m-auto lg:flex lg:justify-between">
@@ -79,7 +81,7 @@ export const Calculator = () => {
           <div>
             <label className='text-xs font-bold text-dgc tracking-wider'>Bill</label>
             <div className="relative">
-              <i className='fa fa-dollar text-gc absolute top-4 left-4'></i>
+              <img className='absolute top-4 left-4' src={iconDollar} alt="" />
               <input
                 type="text"
                 className="block w-full bg-vlgc text-vdc font-bold tracking-wide mt-2 px-4 py-2 rounded text-right text-lg focus:outline-none focus:border-2 focus:border-sc"
@@ -124,7 +126,7 @@ export const Calculator = () => {
               <span className='text-red-500 text-xs font-bold tracking-wider float-right pt-2'>Can't be zero</span>
             }
             <div className="relative">
-              <i className='fa fa-user text-gc absolute top-4 left-4'></i>
+              <img className='absolute top-4 left-4' src={iconPerson} alt="" />
               <input
                 type="text"
                 className={`block w-full bg-vlgc text-vdc font-bold mt-2 px-4 py-2 rounded text-right text-lg tracking-wide focus:outline-none focus:border-2 ${numberOfPeople !== 0 ? 'focus:border-sc' : 'focus:border-red-500'}`}
