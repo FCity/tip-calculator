@@ -123,7 +123,7 @@ export const Calculator = () => {
           <div className="pt-6">
             <label className='text-xs font-bold text-dgc tracking-wider'>Number of People</label>
             {numberOfPeople === 0 &&
-              <span className='text-red-500 text-xs font-bold tracking-wider float-right pt-2'>Can't be zero</span>
+              <span className='text-red-500 text-xs font-bold tracking-wider float-right pt-[5px]'>Can't be zero</span>
             }
             <div className="relative">
               <img className='absolute top-4 left-4' src={iconPerson} alt="" />
