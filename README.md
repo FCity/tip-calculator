@@ -10,9 +10,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -47,16 +44,6 @@ Mobile:
 
 - [React](https://reactjs.org/) - JS library
 - [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
-
-### What I learned
-
-- TailwindCSS
-
-### Continued development
-
-- TailwindCSS
-- React
-- JS
 
 ## Author
 
